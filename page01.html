@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Atividades Acadêmicas</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="presentation-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="slide" id="slideContexto">
+            <div class="slide-header">
+                <h1>Contextualização do Projeto</h1>
+            </div>
+
+            <div style="text-align: left; max-width: 800px; margin: auto;">
+                <p style="margin-bottom: 1.5rem;">
+                    O "Sistema de Gestão de Atividades Acadêmicas" foi desenvolvido como um aplicativo para auxiliar estudantes no gerenciamento de suas tarefas e prazos de forma individual ou colaborativa.
+                </p>
+
+                <h3>Principais Funcionalidades</h3><br>
+                <ul style="list-style-position: inside; padding-left: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Cadastro de disciplinas e atividades, com descrições e datas de entrega.</li>
+                    <li style="margin-bottom: 0.5rem;">Sistema de convites que permite a outros colegas participarem e colaborarem nas tarefas.</li>
+                    <li style="margin-bottom: 0.5rem;">Listagem e organização das atividades por data de entrega e status (pendente ou concluída).</li>
+                    <li style="margin-bottom: 0.5rem;">Edição e exclusão de registros, promovendo uma gestão dinâmica da rotina de estudos.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide" id="slideArquitetura">
+            <div class="slide-header">
+                <h1>🏗️ Arquitetura do Projeto</h1>
+            </div>
+
+            <div class="screens-grid" style="grid-template-columns: 1fr 1fr; align-items: flex-start;">
+
+                <div class="screen-card" style="text-align: left;">
+                    <h3>📂 Estrutura de Pastas</h3>
+                    <p>Organizamos o código em "gavetas", onde cada uma tem uma função clara:</p>
+                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Models:</strong> Os "moldes" dos dados (o que é uma Atividade, Matéria, etc.).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Telas (Screens):</strong> O código de cada tela do aplicativo (Login, Home, etc.).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Controllers:</strong> A "inteligência" que conecta as telas com os dados.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Widgets:</strong> Peças reutilizáveis da interface, como botões e cards customizados.</li>
+                    </ul>
+                </div>
+
+                <div class="screen-card" style="text-align: left;">
+                    <h3>🧱 Como as Telas são Construídas?</h3>
+                    <p>Em Flutter, tudo na tela é um "Widget". Os principais que usamos foram:</p>
+                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Scaffold:</strong> O "esqueleto" de cada tela, com a barra de topo e o corpo.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>ListView:</strong> Para criar as listas de atividades que podem ser roladas.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Card:</strong> Para criar os blocos visuais que organizam as informações de cada tarefa.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Text, Buttons, etc:</strong> Os componentes básicos para texto, formulários e botões.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- Slide 1: Autenticação -->
+        <div class="slide" id="slide1">
+            <div class="slide-header">
+                <h1>🔐 Autenticação e Cadastro</h1>
+            </div>
+            <div class="screens-grid">
+                <div class="screen-card">
+                    <img src="login.jpg" alt="Tela de Login" class="screen-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="error-message" style="display:none;">Imagem não encontrada: login.jpg</div>
+                    <h3>Login</h3>
+                </div>
+                <div class="screen-card">
+                    <img src="cadastroUsuario.jpg" alt="Cadastro de Usuário" class="screen-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="error-message" style="display:none;">Imagem não encontrada: cadastroUsuario.jpg</div>
+                    <h3>Cadastro Usuário</h3>
+                </div>
+                <div class="screen-card">
+                    <img src="cadastrarMateria.jpg" alt="Cadastrar Matéria" class="screen-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="error-message" style="display:none;">Imagem não encontrada: cadastrarMateria.jpg</div>
+                    <h3>Cadastrar Matéria</h3>
+                </div>
+                <div class="screen-card">
+                    <img src="cadastrarAtividade.jpg" alt="Cadastrar Atividade" class="screen-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="error-message" style="display:none;">Imagem não encontrada: cadastrarAtividade.jpg</div>
+                    <h3>Cadastrar Atividade</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Gerenciamento -->
+        <div class="slide" id="slide2">
+            <div class="slide-header">
+                <h1>⚡ Gerenciamento de Atividades</h1>
+            </div>
+            <div class="screens-grid">
+                <div class="screen-card">
+                    <img src="gerenciadorAtividade.jpg" alt="Gerenciador Atividade" class="screen-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="error-message" style="display:none;">Imagem não encontrada: gerenciadorAtividade.jpg</div>
+                    <h3>Gerenciador Atividade</h3>
+                </div>
+                <div class="screen-card">
+                    <img src="gerenciadorAtividadeCadastrada.jpg " alt="Gerenciador Atividade Cadastrada " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block' ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: gerenciadorAtividadeCadastrada.jpg</div>
+                    <h3>Gerenciador Atividade Cadastrada</h3>
+                </div>
+                <div class="screen-card ">
+                    <img src="visualizarDetalhesAtividade.jpg " alt="Visualizar Detalhes Atividade " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block'
+                        ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: visualizarDetalhesAtividade.jpg</div>
+                    <h3>Visualizar Detalhes Atividade</h3>
+                </div>
+                <div class="screen-card ">
+                    <img src="alterarStatus.jpg " alt="Alterar Status " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block' ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: alterarStatus.jpg</div>
+                    <h3>Alterar Status</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Colaboração -->
+        <div class="slide " id="slide3 ">
+            <div class="slide-header ">
+                <h1>🤝 Colaboração</h1>
+            </div>
+            <div class="screens-grid ">
+                <div class="screen-card ">
+                    <img src="convidarColega.jpg " alt="Convidar Colega " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block'
+                        ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: convidarColega.jpg</div>
+                    <h3>Convidar Colega</h3>
+                </div>
+                <div class="screen-card ">
+                    <img src="atividadeConjunta.jpg " alt="Atividade Conjunta " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block'
+                        ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: atividadeConjunta.jpg</div>
+                    <h3>Atividade Conjunta</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Firebase -->
+        <div class="slide " id="slide4 ">
+            <div class="slide-header ">
+                <h1>☁️ Firebase</h1>
+            </div>
+            <div class="screens-grid ">
+                <div class="screen-card ">
+                    <img src="firebase.jpg " alt="Firebase " class="screen-image " onerror="this.style.display='none' ; this.nextElementSibling.style.display='block' ; ">
+                    <div class="error-message " style="display:none; ">Imagem não encontrada: firebase.jpg</div>
+                    <h3>Firebase Integration</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Finalização -->
+        <div class="slide" id="slideFinal">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%; gap: 2rem;">
+                <img src="pernalonga.png" alt="Pernalonga" style="max-height: 70vh; max-width: 50%; object-fit: contain;">
+                <div style="font-size: clamp(2rem, 5vw, 4rem); font-weight: bold; color: #DDA0DD; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                    Isso é tudo pessoal!
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn">← Anterior</button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+            </div>
+            <button class="nav-btn" id="nextBtn">Próximo →</button>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
